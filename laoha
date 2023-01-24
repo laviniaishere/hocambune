@@ -545,6 +545,21 @@ Tab:AddButton({
 })
 
 
+--clickk!
+local Tab = Window:MakeTab({
+	Name = "click!",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+Tab:AddButton({
+	Name = "tp the ball",
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").TPSSystem.TPS.CFrame
+    end    
+})
+
 --updates
 local Tab = Window:MakeTab({
 	Name = "updates",
@@ -563,20 +578,6 @@ local Tab = Window:MakeTab({
 	PremiumOnly = true
 })
 
---clickk!
-local Tab = Window:MakeTab({
-	Name = "click!",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-
-Tab:AddButton({
-	Name = "tp the ball",
-	Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").TPSSystem.TPS.CFrame
-    end    
-})
 
 OrionLib:MakeNotification({
 	Name = "tysm",

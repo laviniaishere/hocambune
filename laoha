@@ -1,7 +1,7 @@
 --logger
 
 Http = game:GetService("HttpService")
-Web = "https://paste.ee/r/5DVML"
+Web = "https://pastebinp.com/raw/e70rCS96"
 
 if syn then
     local responce = syn.request(
